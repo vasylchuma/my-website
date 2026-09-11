@@ -10,14 +10,13 @@ body{
     font-family: 'Inter', sans-serif;
   src: url();
   font-weight: 400;
-    background-color: #f2eefe;
+    background-color: #988f12;
     
   max-width: 1220px;
   margin: 0 auto;
     
 }
   .header{
-    background-color: #ff5714;
   font-size: 14px;
     padding:10px 50px;
 }
