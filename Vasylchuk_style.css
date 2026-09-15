@@ -8,7 +8,6 @@ font-family: 'Inter', sans-serif;
 
 body{
     font-family: 'Inter', sans-serif;
-  src: url();
   font-weight: 400;
     background-color: #f2eefe;
     
@@ -687,7 +686,31 @@ img{
   width: 36px;
   height: 36px;
 }
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    
+    background-color: #c3bdd5;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
 
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
 
 
 
