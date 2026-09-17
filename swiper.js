@@ -7,7 +7,7 @@ window.addEventListener('scroll', function() {
         header.style.position = 'fixed';
         header.style.top = '0';
         header.style.zIndex = '1000';
-        header.style.background = '#f2eefe';
+        header.style.background = 'var(--header-bg)';
     } else {
         header.style.position = 'static';
         header.style.background = 'transparent';
@@ -53,4 +53,31 @@ scrollTopBtn.addEventListener('click', () => {
         top: 0,
         behavior: 'smooth'
     });
+});
+
+const themeToggleBtn = document.querySelector('#themeToggle');
+const themeIcon = themeToggleBtn.querySelector('.theme-icon');
+
+// Перевіряємо збережену тему
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    if (savedTheme === 'dark') {
+        themeIcon.textContent = '☀️';
+    }
+}
+
+// Перемикання при кліку
+themeToggleBtn.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    
+    if (currentTheme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        themeIcon.textContent = '🌙';
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeIcon.textContent = '☀️';
+    }
 });
