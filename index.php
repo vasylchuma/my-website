@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ШІ підказки</title>
     <link rel="stylesheet" href="Vasylchuk_style.css">
+    <link rel="stylesheet" href="adapt.css">
 </head>
 <body>
 
